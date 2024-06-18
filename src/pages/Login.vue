@@ -71,23 +71,22 @@ export default defineComponent({
                 )
                 .catch((error) => {
                     dismiss();
-                    this.showNotif(error);
+                    console.log("holi")
+                    this.showNotif(error.message);
                 })
         },
         async authGoogle() {
             try {
-                // Abre una nueva ventana emergente para la autenticación con Google
                 const authWindow = window.open('http://localhost:3333/login/google');
 
                 if (!authWindow) {
                     throw new Error('No se pudo abrir la ventana de autenticación. Verifica que los pop-ups no estén bloqueados.');
                 }
 
-                // Verifica si la ventana emergente se cierra cada cierto intervalo de tiempo
                 const checkPopupClosed = new Promise((resolve, reject) => {
                     const timer = setInterval(() => {
                         if (authWindow.closed) {
-                            clearInterval(timer); // Detiene la verificación del intervalo de tiempo
+                            clearInterval(timer);
                             resolve();
                         }
                     }, 1000);

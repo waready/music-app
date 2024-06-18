@@ -14,10 +14,10 @@
         <q-btn dense flat round icon="menu" @click="right = !right" />
       </q-toolbar>
 
-      <q-tabs align="left">
-        <q-route-tab to="/page1" label="Page One" />
-        <q-route-tab to="/page2" label="Page Two" />
-        <q-route-tab to="/page3" label="Page Three" />
+      <q-tabs align="center" class="bg-dark">
+        <q-route-tab to="/home" label="Home" />
+        <q-route-tab to="/addmusic" label="Add Music" />
+        <q-route-tab to="/about" label="About" />
       </q-tabs>
     </q-header>
 
@@ -33,16 +33,6 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
   </q-layout>
 </template>
 
