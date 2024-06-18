@@ -17,6 +17,10 @@
     "vue-i18n": "^9.0.0",
     "vuex": "^4.0.1",
     "@quasar/extras": "^1.16.4",
+    "dotenv": "^16.3.1",
+    "secure-web-storage": "^1.0.2",
+    "core-js": "^3.6.5",
+    "crypto-js": "^4.1.1",
     "quasar": "^2.8.0",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
