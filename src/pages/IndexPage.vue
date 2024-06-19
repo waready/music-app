@@ -14,8 +14,8 @@
               </div>
               <audio id="audio-player" style="width: 100%;" controls controlsList="nodownload" ref="audio1"
                 @timeupdate="updateProgress" @play="onPlay">
-                <source :src="'http://localhost:3333/uploads/' + song.audioPath" type="audio/ogg">
-                <source :src="'http://localhost:3333/uploads/' + song.audioPath" type="audio/mpeg">
+                <source :src="'http://localhost:3000/mp3/' + song.audioPath" type="audio/ogg">
+                <source :src="'http://localhost:3000/mp3/' + song.audioPath" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
               <q-space />
@@ -86,7 +86,7 @@ export default defineComponent({
       this.song = song;
       const audio = this.$refs.audio1;
       if (audio) {
-        audio.src = 'http://localhost:3333/uploads/' + song.audioPath;
+        audio.src = 'http://localhost:3000/mp3/' + song.audioPath;
         audio.load();
         if (this.userInteracted) {
           audio.play().catch((error) => {
